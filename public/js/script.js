@@ -28,10 +28,11 @@ socket.on("receive-location", (data) => {
   map.setView([latitude, longitude], 16);
   if (markers[id]) {
     markers[id].setLatLng([latitude, longitude]);
-    console.log(markers[id]);
+    console.log("This is markers id ",markers[id]);
   } else {
-    markers[id] = L.marker([latitude, longitude]).addTo(map);
+    markers[id] = new L.marker([latitude, longitude]).addTo(map);
   }
+  console.log("This is markers ",markers);
 });
 
 socket.on("user-disconnected", (data) => {

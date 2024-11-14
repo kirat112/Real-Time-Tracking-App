@@ -26,3 +26,10 @@ yarn-error.log*
 
 # Ignore coverage directory
 coverage/
+
+# Ignore package-lock files
+package-lock.json
+yarn.lock
+
+# Ignore package files
+package.json
